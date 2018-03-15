@@ -5,7 +5,7 @@
 			?>
 				<div class="hero-index" style="background-color:<?php echo the_field("hero_background_color",'option');?>">
 					<div class="wrap hero-wrap">
-						<img class="hero-index-img" alt="New Orelans Democratic Socialists of America" title="New Orelans Democratic Socialists of America" src="<?php echo the_field("hero_image",'option');?>"/>
+						<img class="hero-index-img" alt="New Orleans Democratic Socialists of America" title="New Orleans Democratic Socialists of America" src="<?php echo the_field("hero_image",'option');?>"/>
 					</div>
 				</div>
 			<?php 
@@ -34,18 +34,23 @@
 								<section class="entry-content cf">
 									<?php the_content(); ?>
 								</section>
-
+							
+								<!--
 								<footer class="article-footer cf">
                  					<?php printf( __( '<p class="footer-category">Filed under: %1$s</p>', 'bonestheme' ), get_the_category_list(', ') ); ?>
 									<?php the_tags( '<p class="footer-tags tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
 								</footer>
+								-->
 
 							</article>
 
 							<?php endwhile; ?>
-
-									<?php //bones_page_navi(); ?>
-
+								<?php if( is_single() == false) { ?>
+								<div class="prev-next-box">
+									<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
+									<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+								</div>
+								<?php }; ?>
 							<?php else : ?>
 
 									<article id="post-not-found" class="hentry cf">
