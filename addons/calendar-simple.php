@@ -45,9 +45,9 @@
 
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
     <!-- Calendar-specific stuff -->
     <link rel="stylesheet" type="text/css" media="screen" href="/css/events.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script>
-    <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/library/js/events.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/library/js/events.envified.min.js"></script>
     
