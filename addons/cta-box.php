@@ -13,16 +13,17 @@
         }
 
         ?>
-
+		
+		
         <b>Get Involved</b>
         <p> 
         Have questions about <?php echo $context_text; ?>, or want to join up? Drop us a line and we'll get in touch:
         </p>
 		<form id="contact">
-        <input type="text" placeholder="Name" required/>
-        <input type="email" placeholder="Email" required/>
+        <input type="text" id="name" placeholder="Name" required/>
+        <input type="email" id="email" placeholder="Email" required/>
         <input type="text" id="mmm_honey" value="" />
-        <input type="tel" placeholder="Phone (Optional)" />
+        <input type="tel" id="phone" placeholder="Phone (Optional)" />
 
         <input type="submit" value="Submit" class="submit"/>
 		</form>
@@ -31,17 +32,35 @@
 <script>
 jQuery("#contact").submit(function(e){
 	
-	console.log("click");
     e.preventDefault(); // if the clicked element is a link
 	
-	if($("#mmm_honey").val()!=""){return};
+	if(jQuery("#mmm_honey").val()!=""){return};
 	
-	if($("#contact")[0].checkValidity()){
-		$.post(
+	if(jQuery("#contact")[0].checkValidity()){
+		jQuery.post(
 			'<?php echo admin_url('admin-ajax.php'); ?>', 
-			{ 'action':'signUp', 'name':'test1', 'email':'test2', 'phone':'test3' }, 
+			{ 
+				'action':'signUp', 
+				'name':jQuery('#name').val(),
+				'email':jQuery('#email').val(), 
+				'phone':jQuery('#phone').val(),
+				'committee-mail':'<?php echo get_field('contact_email'); ?>'
+			}, 
 			function(response) {
 				console.log(response);
+				jQuery("#contact").hide();
+				
+				if(response == "ok"){
+				jQuery("#contact").before(
+				"<div><strong>Thanks! We'll be in touch shortly.</strong> If you don't hear from us or need to get in contact sooner, email us at <a href='mailto:hello@dsaneworleans.org'>hello@dsaneworleans.org</a>.</div>"
+				);
+				}else{
+				jQuery("#contact").before(
+				"<div><strong>Uh-oh- something went wrong.</strong> Please contact us via email at <a href='mailto:hello@dsaneworleans.org'>hello@dsaneworleans.org</a>, or on <a href='https://twitter.com/neworleansdsa'>Twitter.</a></div>"
+				);
+				
+				}
+				
 			}
 		);
 	}

@@ -17,7 +17,7 @@
                                             
                     <div itemprop="name" class="name">{{ event.summary }}</div>
                     <div class="location">{{ event.location }}</div>
-                    <div class="description" itemprop="description">{{ event.description }}</div>
+                    <div class="description" itemprop="description" v-html="event.description"></div>
 
                     <script type='application/ld+json'> 
                         {

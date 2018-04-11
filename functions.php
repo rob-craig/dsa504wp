@@ -41,7 +41,7 @@ add_action( 'wp_ajax_signUp', 'sendmail' );
 add_action( 'wp_ajax_nopriv_signUp', 'sendmail' );
 
 function sendmail(){
-	$to = "negatia@gmail.com";
+	$to = array("hello@dsaneworleans.org");
     $subject = "New Signup Message From DSA504 Site!";
     $message = "
 	There's been a new submission via the DSA504 website form. Huzzah!
@@ -49,13 +49,18 @@ function sendmail(){
 	Name: ".$_POST["name"]."
 	Email: ".$_POST["email"]."
 	Phone: ".$_POST["phone"]."
+	Also sent to: ".$_POST["committee-mail"]."
 	
 	"; 
-
+	
+	if($_POST["committee-mail"]!==""){
+		array_push($to, $_POST["committee-mail"]);
+	}
+	
     if( wp_mail($to, $subject, $message) ){
-        echo "mail sent";
+        echo "ok";
     } else {
-        echo "mail not sent";
+        echo "error";
     }
 
     die();
