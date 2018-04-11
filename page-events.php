@@ -31,7 +31,7 @@
                                             
                     <div itemprop="name" class="name">{{ event.summary }}</div>
                     <div class="location">{{ event.location }}</div>
-                    <div class="description" itemprop="description">{{ event.description }}</div>
+                    <div class="description" itemprop="description" v-html="event.description"></div>
 
                     <script type='application/ld+json'> 
                         {
@@ -61,7 +61,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
     
     <!-- Calendar-specific stuff -->
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/events.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="/css/events.css" /> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script>
     <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/library/js/events.js"></script>
     
