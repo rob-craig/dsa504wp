@@ -37,6 +37,30 @@ function remove_menu_pages() {
   
 };
 
+add_action( 'wp_ajax_signUp', 'sendmail' );
+add_action( 'wp_ajax_nopriv_signUp', 'sendmail' );
+
+function sendmail(){
+	$to = "negatia@gmail.com";
+    $subject = "New Signup Message From DSA504 Site!";
+    $message = "
+	There's been a new submission via the DSA504 website form. Huzzah!
+	
+	Name: ".$_POST["name"]."
+	Email: ".$_POST["email"]."
+	Phone: ".$_POST["phone"]."
+	
+	"; 
+
+    if( wp_mail($to, $subject, $message) ){
+        echo "mail sent";
+    } else {
+        echo "mail not sent";
+    }
+
+    die();
+}
+
 if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page(array(

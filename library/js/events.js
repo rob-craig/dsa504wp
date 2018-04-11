@@ -101,7 +101,7 @@
     let configResponse
 
     try {
-        configResponse = await fetch("http://us108.siteground.us/~dsanewor/calendarconfig.json"); // temp url
+        configResponse = await fetch("http://dsaneworleans.org/calendarconfig.json"); // temp url
     }
     catch (e) {
         console.log(e);

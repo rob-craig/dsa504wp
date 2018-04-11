@@ -18,10 +18,33 @@
         <p> 
         Have questions about <?php echo $context_text; ?>, or want to join up? Drop us a line and we'll get in touch:
         </p>
-        <input type="text" placeholder="Name"/>
-        <input type="email" placeholder="Email"/>
+		<form id="contact">
+        <input type="text" placeholder="Name" required/>
+        <input type="email" placeholder="Email" required/>
         <input type="text" id="mmm_honey" value="" />
-        <input type="tel" placeholder="Phone (Optional)"/>
+        <input type="tel" placeholder="Phone (Optional)" />
 
-        <input type="submit" value="Submit"/>
+        <input type="submit" value="Submit" class="submit"/>
+		</form>
 </div>
+
+<script>
+jQuery("#contact").submit(function(e){
+	
+	console.log("click");
+    e.preventDefault(); // if the clicked element is a link
+	
+	if($("#mmm_honey").val()!=""){return};
+	
+	if($("#contact")[0].checkValidity()){
+		$.post(
+			'<?php echo admin_url('admin-ajax.php'); ?>', 
+			{ 'action':'signUp', 'name':'test1', 'email':'test2', 'phone':'test3' }, 
+			function(response) {
+				console.log(response);
+			}
+		);
+	}
+
+});
+</script>
