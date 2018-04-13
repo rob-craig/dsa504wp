@@ -46,5 +46,5 @@
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <!-- Calendar-specific stuff -->
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="/css/events.css" /> -->
-    <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/library/js/main.8465b917.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/library/js/main.6bf9d8ec.js"></script>
     
