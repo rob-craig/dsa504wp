@@ -127,6 +127,7 @@
 					<div class="social-icons">
 						<a href="https://twitter.com/neworleansdsa"><i class="fab fa-twitter fa-3x"></i></a>
 						<a href="https://facebook.com/neworleansdsa"><i class="fab fa-facebook-square fa-3x"></i></a>
+						<a href="https://instagram.com/neworleansdsa/"><i class="fab fa-instagram fa-3x"></i></a>
 					</div>
 					
 					<span class="menu-extra-footer"></span>
