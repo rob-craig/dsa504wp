@@ -20,10 +20,11 @@
         Have questions about <?php echo $context_text; ?>, or want to join up? Drop us a line and we'll get in touch:
         </p>
 		<form id="contact">
-        <input type="text" id="name" placeholder="Name" required/>
+        <input type="text" id="firstname" placeholder="First Name" required/>
+		 <input type="text" id="lastname" placeholder="Last Name" required/>
         <input type="email" id="email" placeholder="Email" required/>
         <input type="text" id="mmm_honey" value="" />
-        <input type="tel" id="phone" placeholder="Phone (Optional)" />
+        <input type="tel" id="phone" placeholder="Phone" />
 		<select id="track">
 		  <option value="member-track">I'm interested in getting involved!</option>
 		  <option value="updates-track">Just send me DSA504 updates.</option>
@@ -45,11 +46,12 @@ jQuery("#contact").submit(function(e){
 			'<?php echo admin_url('admin-ajax.php'); ?>', 
 			{ 
 				'action':'signUp', 
-				'name':jQuery('#name').val(),
+				'firstname':jQuery('#firstname').val(),
+				'lastname':jQuery('#lastname').val(),
 				'email':jQuery('#email').val(), 
 				'phone':jQuery('#phone').val(),
-				'track':jQuery('#track'.val(),
-				'committee-mail':'<?php echo get_field('contact_email'); ?>'
+				'track':jQuery('#track').val(),
+				'committee-mail':'<?php echo get_field("contact_email"); ?>'
 			}, 
 			function(response) {
 				console.log(response);

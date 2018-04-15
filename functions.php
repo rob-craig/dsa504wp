@@ -37,16 +37,69 @@ function remove_menu_pages() {
   
 };
 
-add_action( 'wp_ajax_signUp', 'sendmail' );
-add_action( 'wp_ajax_nopriv_signUp', 'sendmail' );
+add_action( 'wp_ajax_signUp', 'signUp' );
+add_action( 'wp_ajax_nopriv_signUp', 'signUp' );
 
-function sendmail(){
+function signUp(){
+	
+	//
+	// mailchimp integration 
+	//
+	$api_key = '29fe85525dab5e32ddf09320ec5123d1-us15';
+	$list_id = '379b2c1357'; 
+	$url = 'https://us15.api.mailchimp.com/3.0/lists/' . $list_id . '/members/';
+	
+	$pfb_data = array(
+		'email_address' => $_POST['email'],
+		'status'        => 'subscribed', // change to subscribed on live
+		'merge_fields'  => array(
+		  'FNAME'       => $_POST['firstname'],
+		  'LNAME'       => $_POST['lastname'],
+		  'PHONE'     => $_POST['phone'],
+		  'INTEREST' => $_POST['track']
+		),
+	  );
+	  
+	   // Encode the data
+	  $encoded_pfb_data = json_encode($pfb_data);
+
+	  // Setup cURL sequence
+	  $ch = curl_init();
+	
+	  curl_setopt($ch, CURLOPT_URL, $url);
+	  curl_setopt($ch, CURLOPT_USERPWD, 'user:' . $api_key);
+	  curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+	  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	  curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+	  curl_setopt($ch, CURLOPT_POST, 1);
+	  curl_setopt($ch, CURLOPT_POSTFIELDS, $encoded_pfb_data);
+	  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+	  $results = curl_exec($ch); // store response
+	  $response = curl_getinfo($ch, CURLINFO_HTTP_CODE); // get HTTP CODE
+	  $errors = curl_error($ch); // store errors
+
+	  curl_close($ch);
+	  
+	  $results = array(
+		'results' => $result_info,
+		'response' => $response,
+		'errors' => $errors
+	  );
+
+	  // Sends data back
+	  //echo json_encode($results);
+	  //die;
+	
+	//
+	// send mail notification of signup 
+	//
 	$to = array("hello@dsaneworleans.org");
     $subject = "New Signup Message From DSA504 Site!";
     $message = "
 	There's been a new submission via the DSA504 website form. Huzzah!
 	
-	Name: ".$_POST["name"]."
+	Name: ".$_POST["firstname"]." ".$_POST["lastname"]."
 	Email: ".$_POST["email"]."
 	Phone: ".$_POST["phone"]."
 	User Track: ".$_POST["track"]."
