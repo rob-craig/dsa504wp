@@ -45,8 +45,9 @@ function signUp(){
 	//
 	// mailchimp integration 
 	//
-	$api_key = '29fe85525dab5e32ddf09320ec5123d1-us15';
-	$list_id = '379b2c1357'; 
+	
+	include 'mailchimp.php';
+
 	$url = 'https://us15.api.mailchimp.com/3.0/lists/' . $list_id . '/members/';
 	
 	$pfb_data = array(
