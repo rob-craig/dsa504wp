@@ -24,6 +24,10 @@
         <input type="email" id="email" placeholder="Email" required/>
         <input type="text" id="mmm_honey" value="" />
         <input type="tel" id="phone" placeholder="Phone (Optional)" />
+		<select id="track">
+		  <option value="member-track">I'm interested in getting involved!</option>
+		  <option value="updates-track">Just send me DSA504 updates.</option>
+		</select>
 
         <input type="submit" value="Submit" class="submit"/>
 		</form>
@@ -44,6 +48,7 @@ jQuery("#contact").submit(function(e){
 				'name':jQuery('#name').val(),
 				'email':jQuery('#email').val(), 
 				'phone':jQuery('#phone').val(),
+				'track':jQuery('#track'.val(),
 				'committee-mail':'<?php echo get_field('contact_email'); ?>'
 			}, 
 			function(response) {

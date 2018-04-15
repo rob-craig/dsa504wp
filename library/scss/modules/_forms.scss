@@ -93,3 +93,17 @@ input[type="submit"]:hover {
     padding-left:20px;
 }
 
+#contact select {
+	margin-top:15px;
+    border:1px solid #ffffff;
+    width: 100% !important;
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    border-radius: 0 !important;
+    font-size: 14px;
+    color: #2f2f2f !important;
+    padding: 16px !important;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}

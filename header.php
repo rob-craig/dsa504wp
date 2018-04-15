@@ -97,9 +97,12 @@
 					<img itemprop="logo" alt="New Orleans Democratic Socialists of America" src="<?php echo get_bloginfo('template_directory');?>/library/images/dsa-new-orleans-logo-menu.png"/>
 						
 					<ul>
+						<!-- hardcoded menu items -->
 						<li class="first"><a href="<?php echo get_home_url(); ?>">Home</a></li>
 						<li><a href="<?php echo get_home_url(); ?>/events/">Upcoming Events</a></li>
+						<li><a href="https://www.actionnetwork.org/fundraising/localdues_dsanola">Pay Local Dues</a></li>
 						
+						<!-- dynamic committee menu -->
 						<li class="menu-parent">
 							<span class="menu-sub-header">Committees</span>
 							<ul class="menu-sub-menu">
