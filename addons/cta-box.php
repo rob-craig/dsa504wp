@@ -57,7 +57,7 @@ jQuery("#contact").submit(function(e){
 				console.log(response);
 				jQuery("#contact").hide();
 				
-				if(response == "ok"){
+				if(response.trim() == "ok"){
 				jQuery("#contact").before(
 				"<div><strong>Thanks! We'll be in touch shortly.</strong> If you don't hear from us or need to get in contact sooner, email us at <a href='mailto:hello@dsaneworleans.org'>hello@dsaneworleans.org</a>.</div>"
 				);
