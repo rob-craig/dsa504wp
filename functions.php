@@ -46,7 +46,7 @@ function signUp(){
 	// mailchimp integration 
 	//
 	
-	include 'mailchimp.php';
+	require_once( trailingslashit( get_template_directory() ).'mailchimp.php');
 
 	$url = 'https://us15.api.mailchimp.com/3.0/lists/' . $list_id . '/members/';
 	
