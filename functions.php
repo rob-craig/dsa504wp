@@ -47,7 +47,7 @@ function signUp(){
 	//
 	
 	$wp_root_path = str_replace('/wp-content/themes', '', get_theme_root());
-	require_once( $wp_root_path.'mailchimp.php');
+	require_once( $wp_root_path.'/mailchimp.php');
 	
 
 	$url = 'https://us15.api.mailchimp.com/3.0/lists/' . $list_id . '/members/';
@@ -97,8 +97,8 @@ function signUp(){
 	//
 	// send mail notification of signup 
 	//
-	//$to = array("hello@dsaneworleans.org", "membership@dsaneworleans.org");
-    $to = array("membership@dsaneworleans.org");
+	$to = array("hello@dsaneworleans.org", "membership@dsaneworleans.org");
+    //$to = array("membership@dsaneworleans.org");
 	
 	$subject = "New Signup Message From DSA504 Site!";
     $message = "
