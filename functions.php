@@ -95,9 +95,7 @@ function signUp(){
 	//
 	// send mail notification of signup 
 	//
-	//$to = array("hello@dsaneworleans.org");
-    
-	$to = array("membership@dsaneworleans.org");
+	$to = array("hello@dsaneworleans.org", "membership@dsaneworleans.org");
     
 	$subject = "New Signup Message From DSA504 Site!";
     $message = "
