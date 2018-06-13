@@ -35,7 +35,7 @@
 					while(have_rows('faqs')):  the_row();?>
 
 							<section class="faq-item" itemscope itemtype="http://schema.org/Question">
-								<a name="<?php echo urlencode(get_sub_field('question'));?>"></a>
+								<a class="anchorlink" name="<?php echo urlencode(get_sub_field('question'));?>"> </a>
 								<h2 itemprop="name text" class="question"><?php echo get_sub_field('question');?></h2>
 								<div itemprop="suggestedAnswer" itemscope itemtype="http://schema.org/Answer" class="answer">
 									<div itemprop="text"><?php echo get_sub_field('answer');?></div>
@@ -53,4 +53,15 @@
 		</div>
 	</div>
 
+	<style>
+	.anchorlink {
+	  position: absolute;
+	  left: 0px;
+	  top: -90px;
+	}
+	.faq-item {
+		position:relative;
+	}
+	</style>
+	
 <?php get_footer(); ?>
