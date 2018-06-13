@@ -1220,7 +1220,7 @@ FAQs STYLES
   font-weight: 800;
   margin-bottom: 0px;
   padding-bottom: 0px;
-  color: #4285f4; }
+  color: #ec1f27; }
 
 .faq-item ul {
   list-style-type: disc;
@@ -1518,7 +1518,7 @@ you can add resource intensive styles.
     font-weight: 800;
     margin-bottom: 0px;
     padding-bottom: 0px;
-    color: #4285f4; }
+    color: #ec1f27; }
 
   .faq-item ul {
     list-style-type: disc;
@@ -1530,7 +1530,7 @@ you can add resource intensive styles.
     margin-left: 20px; }
 
   .faq-left h1 {
-    font-size: 38px;
+    font-size: 30px;
     font-weight: 100;
     margin-top: 20px;
     color: #3c3c3c; }
