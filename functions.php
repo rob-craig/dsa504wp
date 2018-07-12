@@ -52,6 +52,17 @@ function signUp(){
 
 	$url = 'https://us15.api.mailchimp.com/3.0/lists/' . $list_id . '/members/';
 	
+	// based on the track selected, assign subscriber to list group
+	// ids:
+	// a7ae87805c  membership-track
+	// 9feea8a0f5  updates-track
+	
+	if($_POST['track'] == 'member-track'){
+		$groups = ['a7ae87805c' => true, '9feea8a0f5' => false];
+	}else{
+		$groups = ['a7ae87805c' => false, '9feea8a0f5' => true];
+	};
+	
 	$pfb_data = array(
 		'email_address' => $_POST['email'],
 		'status'        => 'subscribed', // change to subscribed on live
@@ -61,6 +72,7 @@ function signUp(){
 		  'PHONE'     => $_POST['phone'],
 		  'INTEREST' => $_POST['track']
 		),
+		'interests' => $groups,
 	  );
 	  
 	   // Encode the data

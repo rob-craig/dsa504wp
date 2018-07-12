@@ -14,15 +14,15 @@
 
 						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
 
-	<div id="dsa-cal-app" v-cloak>
-      <?php 
-	  $limitNumEvents = false;
-	  include("addons/calendar-og.php"); ?>
-    </div>
+							<div id="dsa-cal-app" v-cloak>
+							  <?php 
+							  $limitNumEvents = false;
+							  include("addons/calendar-og.php"); ?>
+							</div>
 
-    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>   
-    <!-- Calendar-specific stuff -->
-    <?php include("addons/calendar-og-scripts.php"); ?>
+							<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>   
+							<!-- Calendar-specific stuff -->
+							<?php include("addons/calendar-og-scripts.php"); ?>
 
 
 						</div>
