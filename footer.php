@@ -10,7 +10,7 @@
 				</nav>
 				<div class="copyright">
 					<p>
-					Copyright ©2017 <span itemprop="name">DSA New Orleans</span><br class="visible-xs">
+					Copyright ©2018 <span itemprop="name">DSA New Orleans</span><br class="visible-xs">
 					<span style="font-size:10px;color:#7b7b7b;">All rights reserved.</span>
 					</p>
 				</div>
