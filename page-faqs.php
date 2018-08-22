@@ -62,6 +62,10 @@
 	.faq-item {
 		position:relative;
 	}
+	ol {
+		list-style-type:decimal;
+		padding-left:30px;
+	}
 	</style>
 	
 <?php get_footer(); ?>
