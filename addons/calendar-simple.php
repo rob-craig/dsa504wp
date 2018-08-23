@@ -1,11 +1,7 @@
 
 
-  <div class="intro-section-header">Upcoming Events</div>
-	<div id="dsa-cal-app" v-cloak>
-        <?php 
-		//$limitNumEvents = true;
-		//include("calendar-og.php"); 
-		?>
+    <div class="intro-section-header">Upcoming Events</div>
+	  <div id="dsa-cal-app">
     </div>
     <!-- new react calendar -->
     <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/library/js/main.a60ae860.js"></script>
@@ -25,5 +21,4 @@
     }
     </style>
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <!-- Calendar-specific stuff -->
-    <?php //include("calendar-og-scripts.php"); ?>
+
