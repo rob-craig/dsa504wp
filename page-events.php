@@ -13,7 +13,7 @@
 				<div id="inner-content" class="cf">
 
 						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
-
+							<div class="intro-section-header">Upcoming Events</div>
 							<div id="dsa-cal-app" v-cloak>
 							  <?php 
 							  //$limitNumEvents = false;
@@ -21,6 +21,17 @@
 							</div>
 							<!-- new react calendar -->
 							<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/library/js/main.a60ae860.js"></script>
+							<!-- new calendar css fixes -->
+							<style>
+							#dsa-cal-app a {
+								text-decoration:none;
+							}
+							#dsa-cal-app a:hover {
+								text-decoration:underline;
+							}
+							</style>
+
+
 							<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>   
 							<!-- Calendar-specific stuff -->
 							<?php //include("addons/calendar-og-scripts.php"); ?>
