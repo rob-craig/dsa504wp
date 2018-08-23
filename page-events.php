@@ -14,20 +14,26 @@
 
 						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
 							<div class="intro-section-header">Upcoming Events</div>
-							<div id="dsa-cal-app" v-cloak>
-							  <?php 
-							  //$limitNumEvents = false;
-							  //include("addons/calendar-og.php"); ?>
+							<div id="dsa-cal-app">
 							</div>
 							<!-- new react calendar -->
 							<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/library/js/main.a60ae860.js"></script>
-							<!-- new calendar css fixes -->
+							<!-- new react calendar css fixes -->
 							<style>
 							#dsa-cal-app a {
 								text-decoration:none;
 							}
 							#dsa-cal-app a:hover {
 								text-decoration:underline;
+							}
+							@media only screen and (max-width: 800px) {
+								#dsa-cal-app {
+									text-align: left; 
+									padding: 10px 20px 10px 10px;
+								}
+								.c0111, .c0112 {
+									float:none;
+								}
 							}
 							</style>
 
