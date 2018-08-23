@@ -31,9 +31,6 @@
 									text-align: left; 
 									padding: 10px 20px 10px 10px;
 								}
-								.c0111, .c0112 {
-									float:none;
-								}
 							}
 							</style>
 
