@@ -1158,6 +1158,9 @@ CONTENT STYLES
   list-style-type: disc;
   margin-left: 18px; }
 
+.page .byline {
+  display: none; }
+
 .byline, .footer-category {
   color: #9c9c9c;
   padding: 0;
