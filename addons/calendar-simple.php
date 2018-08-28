@@ -1,6 +1,6 @@
 
 
-    <div class="intro-section-header">Upcoming Events</div>
+<a href="/events/" style="text-decoration: none;"><h2 class="intro-section-header">Upcoming Events</h2></a>
 	  <div id="dsa-cal-app">
     </div>
     <!-- new react calendar -->
