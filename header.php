@@ -100,7 +100,8 @@
 						<!-- hardcoded menu items -->
 						<li class="first"><a href="<?php echo get_home_url(); ?>">Home</a></li>
 						<li><a href="<?php echo get_home_url(); ?>/events/">Upcoming Events</a></li>
-						<li><a href="http://dsaneworleans.org/frequently-asked-questions/">FAQs</a></li>
+						<li><a href="<?php echo get_home_url(); ?>/frequently-asked-questions/">FAQs</a></li>
+						<li><a href="<?php echo get_home_url(); ?>/accessibility/">Accessibility</a></li>
 						<li><a href="https://www.actionnetwork.org/fundraising/localdues_dsanola">Pay Local Dues</a></li>
 						
 						<!-- dynamic committee menu -->
