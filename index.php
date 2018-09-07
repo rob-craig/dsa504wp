@@ -31,6 +31,13 @@
 
 								</header>
 
+								
+								<style>
+									.entry-content img {
+									    width: 100%;
+									    height: auto;
+									}									
+								</style>
 								<section class="entry-content cf">
 									<?php the_content(); ?>
 								</section>
