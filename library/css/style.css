@@ -857,6 +857,10 @@ article {
   margin-bottom: 60px;
   text-align: center; }
 
+.entry-content img {
+  max-width: 100%;
+  height: auto; }
+
 /*********************
 LINK STYLES
 *********************/
