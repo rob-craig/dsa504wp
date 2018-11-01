@@ -70,6 +70,7 @@ function signUp(){
 		  'FNAME'       => $_POST['firstname'],
 		  'LNAME'       => $_POST['lastname'],
 		  'PHONE'     => $_POST['phone'],
+		  'MMERGE10'     => $_POST['zip'],
 		  'INTEREST' => $_POST['track']
 		),
 		'interests' => $groups,
@@ -119,6 +120,7 @@ function signUp(){
 	Name: ".$_POST["firstname"]." ".$_POST["lastname"]."
 	Email: ".$_POST["email"]."
 	Phone: ".$_POST["phone"]."
+	ZIP: ".$_POST["zip"]."
 	User Track: ".$_POST["track"]."
 	
 	Also sent to: ".$_POST["committee-mail"]."

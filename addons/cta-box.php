@@ -24,7 +24,8 @@
 		 <input type="text" id="lastname" placeholder="Last Name" required/>
         <input type="email" id="email" placeholder="Email" required/>
         <input type="text" id="mmm_honey" value="" />
-        <input type="tel" id="phone" placeholder="Phone" />
+        <input type="tel" id="phone" placeholder="Phone" required/>
+		<input type="text" id="zip" placeholder="Zip Code" required/>
 		<select id="track">
 		  <option value="member-track">I'm interested in getting involved!</option>
 		  <option value="updates-track">Just send me DSA504 updates.</option>
@@ -50,6 +51,7 @@ jQuery("#contact").submit(function(e){
 				'lastname':jQuery('#lastname').val(),
 				'email':jQuery('#email').val(), 
 				'phone':jQuery('#phone').val(),
+				'zip':jQuery('#zip').val(),
 				'track':jQuery('#track').val(),
 				'committee-mail':'<?php echo get_field("contact_email"); ?>'
 			}, 
