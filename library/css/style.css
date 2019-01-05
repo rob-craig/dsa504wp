@@ -851,7 +851,8 @@ body {
 article {
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 40px; }
+  padding-bottom: 40px;
+  }
 
 #sidebar {
   margin-bottom: 60px;
@@ -1350,7 +1351,8 @@ you can add resource intensive styles.
   .committee-template-default article {
     padding-left: 16px;
     padding-right: 16px;
-    padding-top: 20px; }
+    padding-top: 20px;
+    }
 
   .header li {
     display: inline;
