@@ -36,6 +36,7 @@
 								)
 							)
 			));
+			echo '<pre>'.$posts.'</pre>';
             ?>
 
 			<div id="content" class="wrap">
