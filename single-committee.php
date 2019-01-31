@@ -78,7 +78,7 @@
 									<?php }; ?>
 
 							<?php }else{  ?>
-
+								<!--
 									<article id="post-not-found" class="hentry cf">
 											<header class="article-header">
 												<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
@@ -90,7 +90,7 @@
 												<p><?php _e( 'This is the error message in the index.php template.', 'bonestheme' ); ?></p>
 										</footer>
 									</article>
-
+								-->
 							<?php }; ?>
 
 
