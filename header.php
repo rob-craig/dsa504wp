@@ -102,7 +102,7 @@
 						<li><a href="<?php echo get_home_url(); ?>/events/">Upcoming Events</a></li>
 						<li><a href="<?php echo get_home_url(); ?>/new-member-resources/">New Member Resources</a></li>
 						<li><a href="<?php echo get_home_url(); ?>/accessibility/">Accessibility</a></li>
-						<li><a href="https://www.actionnetwork.org/fundraising/localdues_dsanola">Pay Local Dues</a></li>
+						<!-- <li><a href="https://www.actionnetwork.org/fundraising/localdues_dsanola">Pay Local Dues</a></li> -->
 						
 						<!-- dynamic committee menu -->
 						<li class="menu-parent">
