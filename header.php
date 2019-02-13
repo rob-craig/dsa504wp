@@ -67,6 +67,15 @@
 	</script>
 	
 	<script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+		<style>
+			.has-vivid-red-background-color,
+			.has-vivid-red-background-color:hover,
+			.has-vivid-red-background-color:focus,
+			.has-vivid-red-background-color:visited,
+			.has-vivid-red-background-color:active {
+				color: #fff;
+			}
+		</style>
 	</head>
 
 	<body <?php body_class(); ?>>
