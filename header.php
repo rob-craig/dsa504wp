@@ -113,6 +113,7 @@
 						<li><a href="<?php echo get_home_url(); ?>/accessibility/">Accessibility</a></li>
 						<li><a href="<?php echo get_home_url(); ?>/bylaws/">Chapter Bylaws</a></li>
 						<li><a href="https://donorbox.org/new-orleans-dsa-local-dues">Pay Local Dues</a></li> 
+						<li><a href="<?php echo get_home_url(); ?>/frequently-asked-questions/">Frequently Asked Questions</a></li> 
 						
 						<!-- dynamic committee menu -->
 						<li class="menu-parent">
