@@ -109,6 +109,7 @@
 						<!-- hardcoded menu items -->
 						<li class="first"><a href="<?php echo get_home_url(); ?>">Home</a></li>
 						<li><a href="<?php echo get_home_url(); ?>/2019-voter-guide/">2019 Voter Guide</a></li>
+						<li><a href="<?php echo get_home_url(); ?>/red-delta/">Red Delta</a></li>
 						<li><a href="<?php echo get_home_url(); ?>/events/">Upcoming Events</a></li>
 						<li><a href="<?php echo get_home_url(); ?>/new-member-resources/">Member Resources</a></li>
 						<li><a href="<?php echo get_home_url(); ?>/accessibility/">Accessibility</a></li>
