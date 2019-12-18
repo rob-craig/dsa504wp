@@ -108,13 +108,13 @@
 					<ul>
 						<!-- hardcoded menu items -->
 						<li class="first"><a href="<?php echo get_home_url(); ?>">Home</a></li>
-						<li><a href="<?php echo get_home_url(); ?>/2019-voter-guide/">2019 Voter Guide</a></li>
+						<li><a href="<?php echo get_home_url(); ?>/what-is-democratic-socialists-of-america/">What is DSA?</a></li>
 						<li><a href="<?php echo get_home_url(); ?>/red-delta/">Red Delta</a></li>
 						<li><a href="<?php echo get_home_url(); ?>/events/">Upcoming Events</a></li>
 						<li><a href="<?php echo get_home_url(); ?>/new-member-resources/">Member Resources</a></li>
 						<li><a href="<?php echo get_home_url(); ?>/accessibility/">Accessibility</a></li>
 						<li><a href="<?php echo get_home_url(); ?>/bylaws/">Chapter Bylaws</a></li>
-						<li><a href="https://donorbox.org/new-orleans-dsa-local-dues">Pay Local Dues</a></li> 
+						<li><a href="https://donorbox.org/new-orleans-dsa-local-dues">Make a Local Donation</a></li> 
 						<li><a href="<?php echo get_home_url(); ?>/frequently-asked-questions/">Frequently Asked Questions</a></li> 
 						
 						<!-- dynamic committee menu -->
