@@ -108,6 +108,7 @@
 					<ul>
 						<!-- hardcoded menu items -->
 						<li class="first"><a href="<?php echo get_home_url(); ?>">Home</a></li>
+						<li><a href="<?php echo get_home_url(); ?>/covid-19-resources-for-workers/">COVID-19 Resources</a></li>
 						<li><a href="<?php echo get_home_url(); ?>/what-is-democratic-socialists-of-america/">What is DSA?</a></li>
 						<li><a href="<?php echo get_home_url(); ?>/red-delta/">Red Delta</a></li>
 						<li><a href="<?php echo get_home_url(); ?>/events/">Upcoming Events</a></li>
