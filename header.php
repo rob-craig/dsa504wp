@@ -19,7 +19,7 @@
 		{
 			var mvp = document.getElementById('vp');
 			mvp.setAttribute('content','width=480');
-			console.log("fitting to 480");
+			console.log("fitting to 480px");
 		}
 		</script>
 		
