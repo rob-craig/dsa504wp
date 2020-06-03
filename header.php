@@ -106,7 +106,9 @@
 					<img itemprop="logo" alt="New Orleans Democratic Socialists of America" src="<?php echo get_bloginfo('template_directory');?>/library/images/dsa-new-orleans-logo-menu.png"/>
 						
 					<ul>
+
 						<li class="first"><a href="<?php echo get_home_url(); ?>">Home</a></li>
+						<li><?php get_search_form(); ?></li>
 						<!-- dynamic sidebar menu -->
 						<?php
 						wp_nav_menu(array('theme_location' => 'sidebar-menu'));
