@@ -37,6 +37,19 @@ function remove_menu_pages() {
   
 };
 
+/**
+ * Customizable navigation menu
+ */
+function register_menus() {
+  register_nav_menus(
+    array(
+      'sidebar-menu' => __( 'Sidebar Menu' )
+    )
+  );
+}
+
+add_action( 'init', 'register_menus' );
+
 add_action( 'wp_ajax_signUp', 'signUp' );
 add_action( 'wp_ajax_nopriv_signUp', 'signUp' );
 

@@ -106,18 +106,11 @@
 					<img itemprop="logo" alt="New Orleans Democratic Socialists of America" src="<?php echo get_bloginfo('template_directory');?>/library/images/dsa-new-orleans-logo-menu.png"/>
 						
 					<ul>
-						<!-- hardcoded menu items -->
 						<li class="first"><a href="<?php echo get_home_url(); ?>">Home</a></li>
-						<li><a href="<?php echo get_home_url(); ?>/covid-19-resources-for-workers/">COVID-19 Resources</a></li>
-						<li><a href="<?php echo get_home_url(); ?>/what-is-democratic-socialists-of-america/">What is DSA?</a></li>
-						<li><a href="<?php echo get_home_url(); ?>/red-delta/">Red Delta</a></li>
-						<li><a href="<?php echo get_home_url(); ?>/events/">Upcoming Events</a></li>
-						<li><a href="<?php echo get_home_url(); ?>/new-member-resources/">Member Resources</a></li>
-						<li><a href="<?php echo get_home_url(); ?>/accessibility/">Accessibility</a></li>
-						<li><a href="<?php echo get_home_url(); ?>/bylaws/">Chapter Bylaws</a></li>
-						<li><a href="https://donorbox.org/new-orleans-dsa-local-dues">Make a Local Donation</a></li> 
-						<li><a href="<?php echo get_home_url(); ?>/frequently-asked-questions/">Frequently Asked Questions</a></li> 
-						
+						<!-- dynamic sidebar menu -->
+						<?php
+						wp_nav_menu(array('theme_location' => 'sidebar-menu'));
+						?>
 						<!-- dynamic committee menu -->
 						<li class="menu-parent">
 							<span class="menu-sub-header">Committees</span>
